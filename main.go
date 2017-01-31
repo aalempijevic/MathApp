@@ -32,7 +32,7 @@ func (c *mainController) Get() {
     num2, _ := strconv.Atoi(c.Ctx.Input.Param(":num2"))
 
     //Set the values for use in the template
-    breakingthebuild.Data["operation"] = "real" + operation
+    c.Data["operation"] = "real" + operation
     c.Data["num1"] = num1
     c.Data["num2"] = num2
     c.TplName = "result.html"
